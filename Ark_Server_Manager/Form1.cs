@@ -24,6 +24,24 @@ namespace Ark_Server_Manager
             string serverPath = lines[0];
             string appPath = lines[1];
             InitializeComponent();
+            
+            if (!IsProcessOpen(Path.GetFileName(lines[0]).Replace(".exe", "")))
+            {
+                textBox_status.ForeColor = Color.Red;
+                textBox_status.Text = "Status: Closed";
+                textBox_error.Text = "";
+                Form2 settingsForm = new Form2();
+                settingsForm.Show();
+            }
+            else
+            {
+                textBox_error.Text = "Stop server before opening settings";
+                textBox_status.ForeColor = Color.Green;
+                textBox_status.Text = "Status: Running";
+
+
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
