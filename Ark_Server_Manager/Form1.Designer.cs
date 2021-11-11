@@ -34,6 +34,8 @@ namespace Ark_Server_Manager
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox_error = new System.Windows.Forms.TextBox();
             this.button_start = new System.Windows.Forms.Button();
+            this.textBox_status = new System.Windows.Forms.TextBox();
+            this.button_refresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -67,8 +69,9 @@ namespace Ark_Server_Manager
             this.textBox_error.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_error.ForeColor = System.Drawing.Color.Red;
             this.textBox_error.Location = new System.Drawing.Point(523, 99);
+            this.textBox_error.Multiline = true;
             this.textBox_error.Name = "textBox_error";
-            this.textBox_error.Size = new System.Drawing.Size(279, 35);
+            this.textBox_error.Size = new System.Drawing.Size(279, 83);
             this.textBox_error.TabIndex = 2;
             // 
             // button_start
@@ -82,12 +85,38 @@ namespace Ark_Server_Manager
             this.button_start.UseVisualStyleBackColor = true;
             this.button_start.Click += new System.EventHandler(this.button2_Click);
             // 
+            // textBox_status
+            // 
+            this.textBox_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox_status.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_status.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBox_status.Location = new System.Drawing.Point(523, 188);
+            this.textBox_status.Multiline = true;
+            this.textBox_status.Name = "textBox_status";
+            this.textBox_status.Size = new System.Drawing.Size(279, 83);
+            this.textBox_status.TabIndex = 4;
+            this.textBox_status.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // button_refresh
+            // 
+            this.button_refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_refresh.BackgroundImage")));
+            this.button_refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_refresh.Location = new System.Drawing.Point(719, 12);
+            this.button_refresh.Name = "button_refresh";
+            this.button_refresh.Size = new System.Drawing.Size(65, 58);
+            this.button_refresh.TabIndex = 5;
+            this.button_refresh.UseVisualStyleBackColor = true;
+            this.button_refresh.Click += new System.EventHandler(this.button_refresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(867, 487);
+            this.Controls.Add(this.button_refresh);
+            this.Controls.Add(this.textBox_status);
             this.Controls.Add(this.button_start);
             this.Controls.Add(this.textBox_error);
             this.Controls.Add(this.textBox1);
@@ -106,6 +135,8 @@ namespace Ark_Server_Manager
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox_error;
         private System.Windows.Forms.Button button_start;
+        private System.Windows.Forms.TextBox textBox_status;
+        private System.Windows.Forms.Button button_refresh;
     }
 }
 

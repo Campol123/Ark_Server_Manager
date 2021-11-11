@@ -23,7 +23,7 @@ namespace Ark_Server_Manager
             textBox_server_location.Text = serverPath;
             textBox_app_location.Text = appPath;
         }
-
+        
         private void button_set_server_location_Click(object sender, EventArgs e)
         {
             string[] lines = File.ReadAllLines(configFilePath);
@@ -37,5 +37,7 @@ namespace Ark_Server_Manager
             lines[1] = textBox_app_location.Text;
             File.WriteAllLines(configFilePath, lines);
         }
+
+
     }
 }
